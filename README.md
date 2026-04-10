@@ -37,4 +37,5 @@ Uzak Erişim (SSL-VPN):Evden veya dışarıdan çalışan kullanıcılar için F
 | **Şube LAN 100** | 172.16.100.0/24 | 172.16.100.1 |
 | **Şube LAN 200** | 172.16.200.0/24 | 172.16.200.1 |
 
+<img width="1869" height="897" alt="Topology" src="https://github.com/user-attachments/assets/54dbd9bd-0543-4ce4-9b8b-aa586044f0c7" />
 
