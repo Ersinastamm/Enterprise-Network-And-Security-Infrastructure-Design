@@ -2,8 +2,9 @@
 EVE-NG üzerinde tasarlanmış; FortiGate A-P HA , Site-to-Site IPsec ve SSL VPN teknolojilerini içeren yedekli kurumsal ağ ve güvenlik altyapısı tasarımı.
 
 
-Proje Özeti:
-Bu proje; EVE-NG simülasyon ortamında, kurumsal bir şirketin Merkez (HQ) ve Şube (Branch) lokasyonları arasındaki ağ ve güvenlik altyapısını uçtan uca kurgulamak amacıyla hazırlanmıştır. Proje, sadece bağlantı kurmayı değil, donanımsal ve hat bazlı yedekliliği (redundancy) ve güvenli uzak erişimi hedeflemektedir.
+Proje Özeti: 
+
+EVE-NG simülasyon ortamında, kurumsal bir şirketin Merkez (HQ) ve Şube (Branch) lokasyonları arasındaki ağ ve güvenlik altyapısını uçtan uca kurgulamak amacıyla hazırlanmıştır. Proje, sadece bağlantı kurmayı değil, donanımsal ve hat bazlı yedekliliği (redundancy) ve güvenli uzak erişimi hedeflemektedir.
 
 
 ### Detaylı IP ve VLAN Planlaması
