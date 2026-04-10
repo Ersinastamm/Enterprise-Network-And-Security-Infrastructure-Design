@@ -41,3 +41,30 @@ TOPOLOGY:
 
 <img width="1869" height="897" alt="Topology" src="https://github.com/user-attachments/assets/54dbd9bd-0543-4ce4-9b8b-aa586044f0c7" />
 
+
+
+Yüksek Erişilebilirlik (HA) Yapılandırması:
+
+<img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/82f31aa2-cc79-4dde-afcc-7ef4410c0ecf" />
+
+<img width="1899" height="908" alt="image" src="https://github.com/user-attachments/assets/2f9ff6f6-7fce-44d8-a4c5-8385390dda1c" />
+
+
+
+
+Site-to-Site IPsec VPN
+
+
+Uzak Erişim (SSL-VPN)
+
+<img width="1877" height="913" alt="image" src="https://github.com/user-attachments/assets/fa1e37a3-5fdb-4513-956b-9995efe4f603" />
+
+
+
+
+
+Firewall Güvenlik Politikaları (Policies)
+
+
+
+
