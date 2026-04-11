@@ -156,6 +156,8 @@ Kullanıcı deneyimini ve bant genişliğini optimize etmek adına **Split Tunne
 
 ### **4. Operasyonel İzleme (SSL-VPN Monitor)**
 
+Görsel üzerinden 'Ahmetb' isimli kullanıcının tünel modunda sisteme başarılı bir şekilde dahil olduğu, bağlantı süresi ve uzak host IP bilgileriyle birlikte doğrulanmaktadır."
+
 <img width="1888" height="907" alt="Screenshot 2026-04-11 190135" src="https://github.com/user-attachments/assets/089fd4bf-62dd-4d42-bc06-fdb22c4000c9" />
 
 
