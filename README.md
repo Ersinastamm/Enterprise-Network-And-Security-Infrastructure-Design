@@ -66,7 +66,10 @@ Sistemde yer alan ikinci FortiGate cihazı Passive (Standby) modda beklemektedir
 
 
 
-FGT-1 HA Yapılandırması:
+HA Senkronizasyon Durumu:
+
+Görselde görüldüğü üzere; FGT-1 ve FGT-2 cihazları 'Synchronized' statüsündedir. Bu durum, her iki ünite arasındaki konfigürasyon veritabanının ve çalışma parametrelerinin birbiriyle tam uyumlu olduğunu göstermektedir.
+
 <img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/82f31aa2-cc79-4dde-afcc-7ef4410c0ecf" />
 
 
