@@ -46,7 +46,11 @@ TOPOLOGY:
 Yüksek Erişilebilirlik (HA) Yapılandırması:
 
 
-FGT1 deki ha arayüzü
+FGT-1 HA Configurasyonu:
+
+Aşağıdaki görselde de görüldüğü üzere; sistem Active-Passive HA modunda yapılandırılmıştır. Donanımsal yedekliliğin yanı sıra, kritik ağ bacaklarında yaşanabilecek kesintilere karşı Interface Monitoring özelliği aktif edilmiştir. Bu sayede, izlenen arayüzlerden herhangi birinin 'down' olması durumunda cihaz otomatik olarak failover yaparak trafiği yedek üniteye aktarır.
+
+Yapılandırmada Session Pick-up özelliği etkinleştirilerek, geçiş esnasında aktif TCP oturumlarının ve VPN tünellerinin korunması sağlanmış, böylece kullanıcı tarafında hissedilebilir bir kesinti yaşanmadan iş sürekliliği garanti altına alınmıştır.
 
 <img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/82f31aa2-cc79-4dde-afcc-7ef4410c0ecf" />
 
