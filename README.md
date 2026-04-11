@@ -73,9 +73,18 @@ Görselde görüldüğü üzere; FGT-1 ve FGT-2 cihazları 'Synchronized' statü
 <img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/82f31aa2-cc79-4dde-afcc-7ef4410c0ecf" />
 
 
+Failover Testleri:
 
 
 
+<img width="774" height="910" alt="image" src="https://github.com/user-attachments/assets/753c800a-739b-43c3-bb71-18f1c0c40b2c" />
+
+<img width="1225" height="805" alt="image" src="https://github.com/user-attachments/assets/7dec0dca-ac2d-4ed5-9e6e-90a3a832f850" />
+
+<img width="1889" height="894" alt="image" src="https://github.com/user-attachments/assets/a60fb45c-6f63-40ba-a041-6651f88f4a81" />
+
+
+<img width="1904" height="908" alt="image" src="https://github.com/user-attachments/assets/4c0f0ad5-14e5-4427-a13c-b210ac227ec2" />
 
 
 
