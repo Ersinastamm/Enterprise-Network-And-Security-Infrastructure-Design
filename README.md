@@ -127,11 +127,13 @@ Evden veya dışarıdan çalışan kullanıcılar için FortiClient SSL-VPN port
 <img width="1896" height="897" alt="image" src="https://github.com/user-attachments/assets/6064bd4d-30eb-42d5-8f96-58c5cf54e908" />
 
 
+<img width="1877" height="913" alt="SSL VPN Status" src="https://github.com/user-attachments/assets/fa1e37a3-5fdb-4513-956b-9995efe4f603" />
+
+
 <img width="1904" height="907" alt="image" src="https://github.com/user-attachments/assets/5de12372-c246-4833-b6e2-015fd562a8d9" />
 
 
 
-<img width="1877" height="913" alt="SSL VPN Status" src="https://github.com/user-attachments/assets/fa1e37a3-5fdb-4513-956b-9995efe4f603" />
 
 ---
 
