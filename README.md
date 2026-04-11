@@ -129,7 +129,7 @@ BR-FIRWALL İPSEC CONFİG
 <img width="1902" height="917" alt="image" src="https://github.com/user-attachments/assets/f3295ba7-e4fc-47c3-af60-22add2d7b83e" />
 
 
-<img width="1904" height="910" alt="image" src="https://github.com/user-attachments/assets/cdd3d32e-c27c-4bd7-ada5-91628fab10c9" />
+<img width="1908" height="908" alt="image" src="https://github.com/user-attachments/assets/206d3c04-1d8b-46ac-b03c-977e7db33495" />
 
 
 <img width="1899" height="908" alt="image" src="https://github.com/user-attachments/assets/c6d22c5c-cf69-4971-8c91-2ad7e1cfa8cc" />
