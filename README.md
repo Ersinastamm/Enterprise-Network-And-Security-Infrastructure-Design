@@ -158,7 +158,6 @@ Kullanıcı deneyimini ve bant genişliğini optimize etmek adına **Split Tunne
 
 <img width="1888" height="907" alt="Screenshot 2026-04-11 190135" src="https://github.com/user-attachments/assets/089fd4bf-62dd-4d42-bc06-fdb22c4000c9" />
 
-Aktif VPN oturumları **SSL-VPN Monitor** üzerinden gerçek zamanlı olarak takip edilmektedir. Bağlı olan kullanıcıların kaynak kullanımı, bağlantı süreleri ve Remote Host IP bilgileri bu ekran üzerinden denetlenmektedir.
 
 ---
 
