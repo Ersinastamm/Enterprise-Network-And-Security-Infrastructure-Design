@@ -45,9 +45,28 @@ TOPOLOGY:
 
 Yüksek Erişilebilirlik (HA) Yapılandırması:
 
+
+FGT1 deki ha arayüzü
+
 <img width="1902" height="902" alt="image" src="https://github.com/user-attachments/assets/82f31aa2-cc79-4dde-afcc-7ef4410c0ecf" />
 
+
+FGT1 ha configurasynu
 <img width="1899" height="908" alt="image" src="https://github.com/user-attachments/assets/2f9ff6f6-7fce-44d8-a4c5-8385390dda1c" />
+
+
+FGT2 ha configurasynu
+
+<img width="1904" height="903" alt="image" src="https://github.com/user-attachments/assets/a37f5099-e372-4359-a32d-a2867df56722" />
+
+
+
+
+
+
+
+
+
 
 
 
