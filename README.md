@@ -1,3 +1,5 @@
+# Enterprise-Network-And-Security-Infrastructure-Design
+
 EVE-NG üzerinde tasarlanmış; **FortiGate Active-Passive HA**, **Site-to-Site IPsec VPN** ve **SSL VPN** teknolojilerini içeren yedekli kurumsal ağ ve güvenlik altyapısı tasarımı.
 
 ---
@@ -120,37 +122,8 @@ Secondary cihaz üzerindeki trafik logları incelendiğinde, istemci (Client) IP
 
 Evden veya dışarıdan çalışan kullanıcılar için FortiClient SSL-VPN portalı yapılandırılmış, kurumsal kaynaklara güvenli erişim simüle edilmiştir.
 
-### **1. SSL-VPN Genel Ayarları (Settings)**
-VPN bağlantısının dış dünyaya açıldığı port ve IP havuzu yapılandırılmıştır.
-* **Dinleme Portu:** Güvenlik amacıyla varsayılan port yerine **4443** portu atanmıştır.
-* **IP Havuzu (Address Range):** Bağlanan kullanıcılara `10.212.134.200 - 10.212.134.210` aralığından otomatik IP atanması sağlanmıştır.
-* **Authentication:** `Remote-user` grubu için `full-access` portalı eşleştirilmiştir.
-
-
-<img width="1897" height="895" alt="Screenshot 2026-04-11 190106" src="https://github.com/user-attachments/assets/32b67e97-1917-48c6-8b27-5093380a2497" />
-
-
-### **2. SSL-VPN Portal ve Split Tunneling**
-Kullanıcı deneyimini ve bant genişliğini optimize etmek adına **Split Tunneling** özelliği aktif edilmiştir.
-* **Split Tunneling (Enabled):** Sadece kurumsal network (Merkez LAN) trafiği VPN tüneline yönlendirilirken; kullanıcının internet trafiği kendi yerel bağlantısı üzerinden akmaya devam eder. Bu sayede firewall üzerindeki internet yükü minimize edilmiştir.
-* **Erişim Modu:** Hem Web Mode (Tarayıcı tabanlı) hem de Tunnel Mode (FortiClient) desteği sunulmuştur.
-
-
-<img width="1905" height="914" alt="Screenshot 2026-04-11 190117" src="https://github.com/user-attachments/assets/548dc8e9-f287-4298-9caa-8bbcfb889127" />
-
-
-### **3. İstemci Tarafı Bağlantı Testi (FortiClient)**
-"Ahmetb" isimli kullanıcı, FortiClient yazılımı üzerinden merkez ofise (HQ) başarılı bir şekilde tünel kurmuştur. Kullanıcının `10.212.134.200` sanal IP adresini aldığı ve tünel süresinin aktif olduğu doğrulanmıştır.
-
-
-<img width="1818" height="882" alt="Screenshot 2026-04-11 190127" src="https://github.com/user-attachments/assets/33f6f4e3-4f21-4283-8d66-762cdd18bf4f" />
-
-
-### **4. Operasyonel İzleme (SSL-VPN Monitor)**
-Aktif VPN oturumları **SSL-VPN Monitor** üzerinden gerçek zamanlı olarak takip edilmektedir. Bağlı olan kullanıcıların kaynak kullanımı, bağlantı süreleri ve Remote Host IP bilgileri bu ekran üzerinden denetlenmektedir.
-
-
-
+<img width="1877" height="913" alt="SSL VPN Status" src="https://github.com/user-attachments/assets/fa1e37a3-5fdb-4513-956b-9995efe4f603" />
 
 ---
 
+**NOC Uzmanı Notu:** Yapılandırma sonrası her iki lokasyonda da yapılan son kontrollerde; IPsec tünel durumunun "Up" olduğu ve veri paketlerinin başarılı bir şekilde şifrelenerek iletildiği doğrulanmıştır.
