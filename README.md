@@ -161,4 +161,3 @@ Kullanıcı deneyimini ve bant genişliğini optimize etmek adına **Split Tunne
 
 ---
 
-**NOC Uzmanı Notu:** Yapılandırma sonrası her iki lokasyonda da yapılan son kontrollerde; IPsec tünel durumunun "Up" olduğu ve veri paketlerinin başarılı bir şekilde şifrelenerek iletildiği doğrulanmıştır.
