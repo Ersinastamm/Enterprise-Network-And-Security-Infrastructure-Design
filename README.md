@@ -51,10 +51,15 @@ FGT-1 HA Yapılandırması:
 Aşağıdaki görselde de görüldüğü üzere; sistem Active-Passive HA modunda yapılandırılmıştır. Donanımsal yedekliliğin yanı sıra, kritik ağ bacaklarında yaşanabilecek kesintilere karşı Interface Monitoring özelliği aktif edilmiştir. Bu sayede, izlenen arayüzlerden herhangi birinin 'down' olması durumunda cihaz otomatik olarak failover yaparak trafiği yedek üniteye aktarır.
 
 Yapılandırmada Session Pick-up özelliği etkinleştirilerek, geçiş esnasında aktif TCP oturumlarının ve VPN tünellerinin korunması sağlanmış, böylece kullanıcı tarafında hissedilebilir bir kesinti yaşanmadan iş sürekliliği garanti altına alınmıştır.
+
+
 <img width="1899" height="908" alt="image" src="https://github.com/user-attachments/assets/2f9ff6f6-7fce-44d8-a4c5-8385390dda1c" />
 
 
 FGT-2 HA Yapılandırması:
+
+Sistemde yer alan ikinci FortiGate cihazı Passive (Standby) modda beklemektedir. Bu ünite, Primary cihaz ile sürekli bir 'Heartbeat' bağı kurarak konfigürasyon, firewall session tablosu ve IPsec tünel bilgilerini gerçek zamanlı olarak senkronize eder
+
 
 <img width="1904" height="903" alt="image" src="https://github.com/user-attachments/assets/a37f5099-e372-4359-a32d-a2867df56722" />
 
