@@ -1,0 +1,113 @@
+FGT-2 # show vpn ipsec phase1-interface
+config vpn ipsec phase1-interface
+    edit "HQ-TO-BR"
+        set interface "port4"
+        set peertype any
+        set net-device disable
+        set proposal des-md5
+        set remote-gw 192.168.159.225
+        set psksecret ENC TV+v9JyU165WDiEfsBEF9gHfvmYQOu1D7vBu7Zif3Hu7Wuj1V9MZupGME3654idKz9V2qF+TuOw/7zbRcRq7URBuMr5650oQUfrAuGJt7rZNlZ8Jzk7CnE8xQ2ySRxRa9dQtQkq9ylTbQjd83zFX2Aq2ZMgq/yHyO0hRXYha4g2xtOCU3GsFQ2n+AYdJxqvd4Nblrg==
+    next
+end
+
+
+
+
+
+FGT-2 # show vpn ipsec phase2-interface
+config vpn ipsec phase2-interface
+    edit "HQ-TO-BR"
+        set phase1name "HQ-TO-BR"
+        set proposal des-md5 des-sha1
+    next
+end
+
+FGT-2 # show firewall policy
+config firewall policy
+    edit 1
+        set name "LAN-TO-WAN"
+        set uuid 10f9a09a-329f-51f1-a4c2-e3d42edb5502
+        set srcintf "VLAN-10" "VLAN-20" "VLAN-30" "VLAN-40"
+        set dstintf "port4"
+        set action accept
+        set srcaddr "VLAN-10 address" "VLAN-20 address" "VLAN-30 address" "VLAN-40 address"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set nat enable
+    next
+    edit 2
+        set name "SSL-TO-HQ"
+        set uuid 50427422-32b1-51f1-44c3-6d173a37ac04
+        set srcintf "ssl.root"
+        set dstintf "VLAN-10" "VLAN-20" "VLAN-30" "VLAN-40"
+        set action accept
+        set srcaddr "SSLVPN_TUNNEL_ADDR1"
+        set dstaddr "VLAN-10 address" "VLAN-20 address" "VLAN-30 address" "VLAN-40 address"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set groups "Remote-user"
+    next
+    edit 3
+        set name "HQ-TO-BR"
+        set uuid 003d30ec-3514-51f1-3121-99fc425183dd
+        set srcintf "VLAN-10" "VLAN-20" "VLAN-30" "VLAN-40"
+        set dstintf "HQ-TO-BR"
+        set action accept
+        set srcaddr "VLAN-10 address" "VLAN-20 address" "VLAN-30 address" "VLAN-40 address"
+        set dstaddr "VLAN-100" "VLAN-200"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+    next 
+    edit 4
+        set name "BR-TO-HQ"
+        set uuid 17254d58-3514-51f1-d518-5d54fbac2edd
+        set srcintf "HQ-TO-BR"
+        set dstintf "VLAN-10" "VLAN-20" "VLAN-30" "VLAN-40"
+        set action accept
+        set srcaddr "VLAN-100" "VLAN-200"
+        set dstaddr "VLAN-10 address" "VLAN-20 address" "VLAN-30 address" "VLAN-40 address"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set nat enable
+    next 
+end      
+
+
+FGT-2 # 
+FGT-2 # show router static
+config router static
+    edit 1
+        set gateway 192.168.159.2
+        set device "port4"
+    next
+    edit 2
+        set dst 172.16.100.0 255.255.255.0
+        set device "HQ-TO-BR"
+    next
+    edit 3
+        set dst 172.16.200.0 255.255.255.0
+        set device "HQ-TO-BR"
+    next
+end
+
+FGT-2 # 
+FGT-2 # 
+FGT-2 # 
+FGT-2 # show system ha
+config system ha
+    set group-name "iron.local"
+    set mode a-p
+    set password ENC KwF0gTFyGSJDFmxt54EHys9bT7mr4DuTf7HIikG7brnZujKXIywg8nII9cZf/5q3SBZ5bTzeadDzwkmRD0EszIvFnie20YpIW9/PgKgcZ+Y9pwB7hDrMkZFzvVLRO1WZfiU9f9Fxw7xZRuneIXAU7zWkbDzPiSbDkfzuFc1TXoAFszml8+ad00sbphD1xtvLPxAA/A==
+    set hbdev "port3" 0 
+    set session-pickup enable
+    set override disable
+    set priority 100
+    set monitor "LAN" "port4" 
+end
+
+
