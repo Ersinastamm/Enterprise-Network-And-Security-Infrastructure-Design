@@ -1,3 +1,5 @@
+Aşağıda Merkez ve Şubede bulunan kullanıcıların ayrıntılı ping testleri bulunmaktadır.
+
 
 <img width="740" height="1028" alt="Screenshot 2026-04-11 221537" src="https://github.com/user-attachments/assets/49cc7c7c-079f-4a5a-8a16-b965d58d899e" />
 
