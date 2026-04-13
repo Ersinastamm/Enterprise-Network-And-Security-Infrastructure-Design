@@ -1,0 +1,87 @@
+FGT-BR # show vpn ipsec phase1-interface
+config vpn ipsec phase1-interface
+    edit "BR-TO-HQ"
+        set interface "port3"
+        set peertype any
+        set net-device disable
+        set proposal des-md5
+        set remote-gw 192.168.159.200
+        set psksecret ENC o4MTMEybx2iVazl5+5Mb8bxsRXmPZXv8mD2Dm5tFyDU3uEuxHYEn1Yqr0Nvd52SvUwMjibjhLwgnCPK5QUwibNcTPw+qo147EVfJvoYo0XNftgtmL3e7euwPkyzecopxt5yZz1XJGG2oV1Xe8r0PzVR23XAGmzoT858vcuDKjz+yhr/1MMexXNti2wOfJp8eUL2C6w==
+    next
+end
+
+FGT-BR # show vpn ipsec phase2-interface
+config vpn ipsec phase2-interface
+    edit "BR-TO-HQ"
+        set phase1name "BR-TO-HQ"
+        set proposal des-md5 des-sha1
+    next
+end
+
+FGT-BR # show firewall policy
+config firewall policy
+    edit 3
+        set name "LAN-TO-WAN"
+        set uuid 907d3bee-2f8c-51f1-2fdd-2ae0b842d522
+        set srcintf "VLAN-100" "VLAN-200"
+        set dstintf "port3"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+        set nat enable
+    next
+    edit 2
+        set name "BR-TO-HQ"
+        set uuid 3d6c89c2-34fb-51f1-aa28-8886958a8a44
+        set srcintf "VLAN-100" "VLAN-200"
+        set dstintf "BR-TO-HQ"
+        set action accept
+        set srcaddr "VLAN-100 address" "VLAN-200 address"
+        set dstaddr "vlan-10" "vlan20" "vlan30" "vlan40"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+    next
+    edit 4
+        set name "HQ-TO-BR"
+        set uuid 53ecb4c4-34fb-51f1-b0ff-4745851abd8f
+        set srcintf "BR-TO-HQ"
+        set dstintf "VLAN-100" "VLAN-200"
+        set action accept
+        set srcaddr "vlan-10" "vlan20" "vlan30" "vlan40"
+        set dstaddr "VLAN-100 address" "VLAN-200 address"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic all
+    next 
+end      
+
+FGT-BR # 
+FGT-BR # show router static
+config router static
+    edit 5
+        set gateway 192.168.159.2
+        set device "port3"
+    next
+    edit 2
+        set dst 192.168.10.0 255.255.255.0
+        set device "BR-TO-HQ"
+    next
+    edit 3
+        set dst 192.168.20.0 255.255.255.0
+        set device "BR-TO-HQ"
+    next
+    edit 4
+        set dst 192.168.30.0 255.255.255.0
+        set device "BR-TO-HQ"
+    next
+    edit 6
+        set dst 192.168.40.0 255.255.255.0
+        set device "BR-TO-HQ"
+    next
+end
+
+
